@@ -1,0 +1,31 @@
+@import '../../style/colors';
+
+.header {
+  position: sticky;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+  width: 1200px;
+  justify-content: space-between;
+  background-color: var(--color-elements);
+  color: #121111;
+}
+
+.nav {
+  display: flex;
+  gap: 32px;
+}
+
+.rigthbutt {
+  display: flex;
+  gap: 15px;
+}
+
+.page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: black;
+}
