@@ -1,21 +1,29 @@
+import Button from '../Button';
 import styles from './Header.module.scss';
 
-export const Header = () => {
-  return (
-    <>
-      <header className={styles.header}>
-        <h1>NexaFin</h1>
-        <nav className={styles.nav}>
-          <a href="/" className={styles.page}>AssetPage</a>
-          <a href="/" className={styles.page}>MarketsPage</a>
-          <a href="/" className={styles.page}>PortfolioPage</a>
-        </nav>
-        <div className={styles.rigthbutt}>
-          <button className={styles.contact}>Contact</button>
-          |
-          <button className={styles.singin}>Sing In</button>
-        </div>
-      </header>
-    </>
-  );
-};
+const links = ['Markets', 'Portfolio', 'Pricing', 'Docs', 'About'];
+
+const Header = () => (
+  <header className={styles.header}>
+    <div className={styles.inner}>
+      <a href="/" className={styles.logo}>
+        <span className={styles.logoMark} />
+        CryptoDash
+      </a>
+
+      <nav className={styles.nav}>
+        {links.map((link) => (
+          <a key={link} href={`#${link.toLowerCase()}`}>{link}</a>
+        ))}
+      </nav>
+
+      <div className={styles.actions}>
+        <button className={styles.themeToggle} aria-label="Toggle theme">◐</button>
+        <Button variant="ghost">Log in</Button>
+        <Button>Get started</Button>
+      </div>
+    </div>
+  </header>
+);
+
+export default Header;

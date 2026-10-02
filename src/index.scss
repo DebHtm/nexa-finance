@@ -1,0 +1,15 @@
+@use './style/colors';
+@use './style/tokens';
+@use './style/typography';
+
+*, *::before, *::after { box-sizing: border-box; }
+body, h1, h2, h3, p, ul { margin: 0; }
+ul { padding: 0; list-style: none; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; }
+
+// body {
+//   display: flex;
+//   justify-content: center;
+//   height: 5000px;
+// }

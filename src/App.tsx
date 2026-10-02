@@ -1,15 +1,15 @@
-import './App.css'
-import { Header } from './components/Header'
-import { HomePage } from './pages/HomePage'
+import Header from './components/Header';
+import Footer from './components/Footer';
+import HomePage from './pages/HomePage';
 
-function App() {
-
-  return (
-    <>
-      <Header />
+const App = () => (
+  <>
+    <Header />
+    <main>
       <HomePage />
-    </>
-  )
-}
+    </main>
+    <Footer />
+  </>
+);
 
-export default App
+export default App;

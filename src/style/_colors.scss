@@ -1,10 +1,51 @@
-:root {
-  --color-primary: #313237;
-  --color-secondary: #89939A;
-  --color-icons: #B4BDC3;
-  --color-elements: #E2E6E9;
-  --color-hover-bg: #FAFBFC;
-  --color-white: #FFF;
-  --color-green: #27AE60;
-  --color-red: #EB5757;
+:root,
+[data-theme='light'] {
+  --color-text-primary: #313237;
+  --color-text-secondary: #89939a;
+  --color-text-muted: #b4bdc3;
+
+  // Background
+  --color-bg-primary: #ffffff;
+  --color-bg-secondary: #f7f8f9;
+  --color-bg-hover: #fafbfc;
+
+  // UI elements
+  --color-border: #e2e6e9;
+  --color-divider: #e8ebed;
+  --color-icon: #b4bdc3;
+
+  // Accent
+  --color-accent: #313237;
+  --color-accent-hover: #1f2124;
+
+  // States
+  --color-success: #27ae60;
+  --color-danger: #eb5757;
+  --color-warning: #f2c94c;
+  --color-info: #2f80ed;
+
+  // Crypto / charts
+  --color-chart-positive: #27ae60;
+  --color-chart-negative: #eb5757;
+
+  // Misc
+  --color-white: #ffffff;
+  --color-black: #000000;
+}
+
+[data-theme='dark'] {
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #9aa0b8;
+  --color-text-muted: #5c627c;
+
+  --color-bg-primary: #0a0b14;
+  --color-bg-secondary: #12131f;
+  --color-bg-hover: #181a2a;
+
+  --color-border: #23253a;
+  --color-divider: #1c1e30;
+  --color-icon: #5c627c;
+
+  --color-accent: #7c5cff;
+  --color-accent-hover: #6a48f0;
 }
