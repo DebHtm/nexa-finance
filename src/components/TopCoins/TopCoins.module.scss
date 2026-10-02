@@ -1,0 +1,10 @@
+.coinbox {
+  display: grid;
+  align-items: center;
+  // justify-content: space-between;
+  grid-template-columns: repeat(8, 1fr); 
+  gap: 15px;
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 24px;
+}
