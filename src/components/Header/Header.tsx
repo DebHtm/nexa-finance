@@ -1,19 +1,20 @@
 import Button from '../Button';
 import styles from './Header.module.scss';
+import { NavLink } from 'react-router-dom';
 
 const links = ['Markets', 'Portfolio', 'Pricing', 'Docs', 'About'];
 
 const Header = () => (
   <header className={styles.header}>
     <div className={styles.inner}>
-      <a href="/" className={styles.logo}>
+      <NavLink to="/" className={styles.logo}>
         <span className={styles.logoMark} />
         CryptoDash
-      </a>
+      </NavLink>
 
       <nav className={styles.nav}>
         {links.map((link) => (
-          <a key={link} href={`#${link.toLowerCase()}`}>{link}</a>
+          <NavLink key={link} to={`${link.toLowerCase()}`}>{link}</NavLink>
         ))}
       </nav>
 

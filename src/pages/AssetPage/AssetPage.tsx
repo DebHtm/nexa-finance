@@ -1,6 +1,7 @@
 import Button from '../../components/Button';
 import Card from '../../components/Card';
 import styles from './AssetPage.module.scss';
+import { NavLink } from 'react-router-dom';
 
 const periods = ['1D', '1W', '1M', '1Y', 'ALL'];
 
@@ -30,7 +31,7 @@ const news = [
 const AssetPage = () => (
   <div className={styles.page}>
     <nav className={styles.breadcrumbs}>
-      <a href="/markets">Markets</a>
+      <NavLink to="/markets">Markets</NavLink>
       <span>/</span>
       <span>Bitcoin</span>
     </nav>

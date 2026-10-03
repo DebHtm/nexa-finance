@@ -1,5 +1,6 @@
 import type { CoinSummary } from '../../../types/coin';
 import styles from './CoinCard.module.scss';
+import { NavLink } from 'react-router-dom';
 
 const UP = '0,26 15,22 30,24 45,15 60,17 75,8 100,4';
 const DOWN = '0,6 15,10 30,8 45,17 60,15 75,23 100,27';
@@ -9,7 +10,7 @@ const CoinCard = ({ coin }: { coin: CoinSummary }) => (
     <div className={styles.top}>
       <span className={styles.icon}>{coin.symbol[0]}</span>
       <div className={styles.name}>
-        <a href={`/asset/${coin.id}`} className={styles.link}>{coin.name}</a>
+        <NavLink to={`/markets/${coin.id}`} className={styles.link}>{coin.name}</NavLink>
         <small>{coin.symbol}</small>
       </div>
       <button className={styles.star} aria-label="Add to watchlist">☆</button>
