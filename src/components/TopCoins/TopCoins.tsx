@@ -1,5 +1,5 @@
-import Button from '../Button';
-import styles from './TopCoins.module.scss';
+import Button from '../Button'
+import styles from './TopCoins.module.scss'
 
 const cryptoData = [
   {
@@ -82,35 +82,29 @@ const cryptoData = [
     chartColor: 'red',
     icon: '/images/cardano.svg',
   },
-];
+]
 
 const TopCoins = () => (
-  <>
+  <div className={styles.coinList}>
     {cryptoData.map((coin) => (
       <div key={coin.id} className={styles.coinbox}>
         <span>{coin.id}</span>
-
         <img src={coin.icon} alt={coin.name} />
-
         <span>{coin.name}</span>
         <span>{coin.symbol}</span>
-
         <span>${coin.price}</span>
-
         <span className={coin.change24h >= 0 ? 'positive' : 'negative'}>
           {coin.change24h > 0 ? '+' : ''}
           {coin.change24h}%
         </span>
-
         <span className={coin.change7d >= 0 ? 'positive' : 'negative'}>
           {coin.change7d > 0 ? '+' : ''}
           {coin.change7d}%
         </span>
-
-       <Button>Buy</Button>
+        <Button>Buy</Button>
       </div>
     ))}
-  </>
-);
+  </div>
+)
 
-export default TopCoins;
+export default TopCoins
